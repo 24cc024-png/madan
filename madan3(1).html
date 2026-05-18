@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Order Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; width: 300px; }
+        input { width: 100%; padding: 8px; margin: 8px 0; }
+        button { background: #28a745; color: white; padding: 10px; border: none; border-radius: 4px; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <h2>Online Product Order</h2>
+    <form action="bill.jsp" method="post">
+        <label>Customer Name:</label>
+        <input type="text" name="customerName" required>
+
+        <label>Product Name:</label>
+        <input type="text" name="productName" required>
+
+        <label>Quantity:</label>
+        <input type="number" name="quantity" min="1" required>
+
+        <label>Price (per unit):</label>
+        <input type="number" name="price" step="0.01" min="0" required>
+
+        <button type="submit">Generate Bill</button>
+    </form>
+</body>
+</html>
